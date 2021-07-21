@@ -1,0 +1,37 @@
+@import "../../styles/index.scss";
+
+.header {
+  padding: 8px 80px 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-content: space-around;
+  font-size: 14px;
+  color: $gray-chateau;
+
+  p {
+    margin: 0 120px;
+    a {
+      margin: 0 8px;
+    }
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid $mercury;
+  border-bottom: 1px solid $mercury;
+
+  img {
+    height: 70px;
+  }
+  .nav-list {
+    display: flex;
+    color: $emperor;
+
+    .nav-item {
+      margin: 10px;
+    }
+  }
+}
