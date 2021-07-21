@@ -1,0 +1,86 @@
+@import '../../styles/styles.scss';
+.search__form{
+    .search__form--header{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top:48px;
+        padding-bottom: 27px;
+        p{
+            color:$black;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 33px;
+            text-transform: capitalize;
+        }
+        button {
+            background-color: $green;
+            font-size: 14px;
+            color:$white;
+            text-transform: capitalize;
+        }
+    }
+    .search__form--fields{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        .left{
+            flex-basis: 30%;
+            input{
+                color:$triple_9;
+                font-size: 14px;
+                line-height: 19px;
+                border-left: none;
+
+            }
+            .input-group-text{
+                background-color:$white;
+            }
+
+        }
+        .right{
+            display: flex;
+            flex-direction: row;
+            flex-basis:48.5%;
+            justify-content: space-between;
+            .toggle,.menu__icons{
+                display:flex;
+                flex-direction: row;
+                
+            }
+            .toggle{
+                flex-basis: 26%;
+                p{
+                    width:80%;
+                    margin-bottom: 0px;
+                    font-size: 12px;
+                    color:$triple_3;
+                    text-transform: capitalize;
+                }
+            }
+            .menu__icons{
+                flex-wrap: nowrap;
+                align-items: center;
+                flex-basis: 8%;
+            }
+            .select-boxes{
+                .form-select{
+                    
+                        font-size: 14px;
+                        color:$triple_3;
+                        text-transform: capitalize;
+                    
+                }
+            }
+            .select-boxes:first-child {
+                flex-basis:29%;
+
+            }
+            .select-boxes:first-child ~ .select-boxes{
+                flex-basis: 22%;
+            }
+        }
+        
+    }
+}
