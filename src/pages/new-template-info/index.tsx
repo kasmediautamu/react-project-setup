@@ -4,7 +4,9 @@ import Layout from "../../components/layout"
 const NewTemplateInfo: React.FC = () => {
   return(
     <>
-      <Layout></Layout>
+      <Layout>
+        <section></section>
+      </Layout>
     </>
   )
 }
