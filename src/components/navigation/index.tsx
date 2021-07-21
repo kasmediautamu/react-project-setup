@@ -1,23 +1,23 @@
-import React from "react"
+import { Link } from 'react-router-dom'
 import './styles.scss'
-import Logo from '../../assets/images/logo.png'
+const Navigation =()=>{
 
-const Navigation: React.FC = () => {
-  return (
-    <>
-      <div className="header">
-        <p><a href="/">Login</a> | <a href="/">Register</a></p>
-      </div>
-      <nav>
-        <img src={Logo} alt="logo" />
-        <ul className="nav-list">
-          <li className="nav-item">Home</li>
-          <li className="nav-item">Provider Registration</li>
-          <li className="nav-item">Contact Us</li>
-        </ul>
-      </nav>
-    </>
-  )
+    return (
+        <div className="navigation">
+            <div className="navigation__mini">
+                <Link to={""}>Login</Link>
+                <Link to={""}>Register</Link>
+            </div>
+            <hr />
+            <div className="navigation__main">
+                <div className="logo">LOGOHERE</div>
+                <ul className="navigation__main--list">
+                    <Link to={""}>home</Link>
+                    <Link to={""}>provider registration</Link>
+                    <Link to={""}>contact us</Link>
+                </ul>
+            </div>
+        </div>
+    )
 }
-
 export default Navigation

@@ -1,14 +1,24 @@
-import React from "react"
-import './styles.scss'
-
-const Footer: React.FC = () => {
-  return(
-    <footer>
-      <div className="copyright-section">
-        <p>Copyright &copy; 2021 by HealthPlan services. ALL Rights Reserved. <a href="/">Terms and Conditions</a> | <a href="/">Privacy Statement</a></p>
+import { Link } from "react-router-dom";
+import "./styles.scss";
+const Footer = () => {
+    const getYear=()=> {
+        return new Date().getFullYear();
+    }
+  return (
+    <div className="footer">
+      <div className="footer__pale"></div>
+      <div className="footer__dark">
+        <div className="left">
+          <p className="footer__links">
+            Copyright {getYear()} By Health Olan Services. All Rights Reserved
+            <Link to="/"><span className="span__border">Terms of Use</span></Link>
+            <Link to="/"><span>Privascy Statement</span></Link>
+          </p>
+          <img src="" alt="" />
+        </div>
+        <div className="right"></div>
       </div>
-    </footer>
-  )
-}
-
-export default Footer
+    </div>
+  );
+};
+export default Footer;
