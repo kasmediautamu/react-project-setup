@@ -3,7 +3,7 @@ import Form from '../Form'
 import './styles.scss'
 
 type ITemplates ={
-children:any
+children?:any
 }
 const Templates = (props:ITemplates) => {
     const {children} = props

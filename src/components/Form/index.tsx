@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 import Button from "../BaseForm/Button"
 import BaseDropDown from "../BaseForm/Dropdown"
 import InputGroup from "../BaseForm/InputGroup"
@@ -8,12 +8,15 @@ import _menu from '../../assets/i/menu.svg'
 import './styles.scss'
 
 const Form =()=>{
-   
+   let history = useHistory()
+   const changeLocation =()=>{
+       return history.push('/new-template-info')
+   }
     return (
         <form className="search__form">
             <div className="search__form--header">
                 <p>template manager</p>
-                <Button primary="button">new template</Button>
+                <Button primary="button" onClick={changeLocation}>new template</Button>
             </div>
             <div className="search__form--fields">
                 <div className="left">
