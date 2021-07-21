@@ -1,14 +1,17 @@
+import React from 'react'
 import _edit from '../../../assets/i/edit.svg'
 import './styles.scss'
-const TemplatesList =()=>{
+const TemplatesList:React.FC =()=>{
  return (
-     <table>
+     <div className="table__wrapper">
+         <table>
          <tr>
              <th>template name</th>
              <th>version</th>
              <th>document type</th>
              <th>status</th>
              <th>date</th>
+             <th></th>
          </tr>
          <tr>
              <td>2020 Admin Summary</td>
@@ -27,6 +30,7 @@ const TemplatesList =()=>{
              <td><img src={_edit} alt="" /></td>
          </tr>
      </table>
+     </div>
  )
 }
 export default TemplatesList

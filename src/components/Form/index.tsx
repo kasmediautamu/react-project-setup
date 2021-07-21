@@ -31,7 +31,7 @@ const Form =()=>{
                         <img src={_toggleL} alt="" />
                     </div>
                     <div className="menu__icons">
-                        <img src={_squares} alt="" />
+                        <Link to={`/`}><img src={_squares} alt="" /></Link>
                         <Link to={`/templates-list`}><img src={_menu} alt="" /></Link>
                     </div>
                 </div>

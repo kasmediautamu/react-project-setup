@@ -1,12 +1,12 @@
-import React from "react";
+
 import './styles.scss'
 type Props = {
   primary: string;
-  children: any;
+  children?: any;
   btnClass?: string;
   active?: string;
   disabled?: boolean;
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?: any
 };
 function Button(props: Props) {
   const { primary, children, active, btnClass, disabled, onClick } = props;
