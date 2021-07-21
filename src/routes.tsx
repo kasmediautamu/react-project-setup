@@ -10,29 +10,26 @@ const Routes: React.FC = () => {
   return (
     <Router>
       <Suspense fallback={<h1>Loading...</h1>}>
-      <Navigation/>
+        <Navigation />
         <Switch>
-        <Route path="/" 
-                    render={({match:{path}})=>(
-                        <Templates>
-                            <Switch>
-                                <Route
-                                exact
-                                path={path+"/"}
-                                component={TemplatesPDF}
-                                />
-                                <Route path={`/templates-list`} component={TemplatesList}/>
-                                <Route 
-            exact
-            component={NewTemplateInfo}
-            path="/new-template-info">
-          </Route>
-                                <Redirect exact from={path+"/*"} to={path}/>
-                            </Switch>
-                        </Templates>
-                    )}
-                    />
-          
+          <Route component={NewTemplateInfo} path="/new-template-info" />
+          <Route path="/"
+            render={({ match: { path } }) => (
+              <Templates>
+                <Switch>
+                  <Route
+                    exact
+                    path={path + "/"}
+                    component={TemplatesPDF}
+                  />
+                  <Route path={`/templates-list`} component={TemplatesList} />
+                  
+                  <Redirect exact from={path + "/*"} to={path} />
+                </Switch>
+              </Templates>
+            )}
+          />
+
           <Route> 404 Not Found! </Route>
         </Switch>
       </Suspense>

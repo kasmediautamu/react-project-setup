@@ -1,31 +1,29 @@
 @import "../../styles/index.scss";
 
-.footer {
-    .footer__pale{
-        background-color: $footer_top;
-        padding-top:30px;
-        padding-bottom: 32px;
+footer {
+  .footer__pale {
+    background-color: $mine-shaft;
+    padding-top: 30px;
+    padding-bottom: 32px;
+  }
+  .footer__dark {
+    background-color: $mine-shaft-2;
+    padding-left: 100px;
+    p {
+      padding: 15px 0 15px;
+      color: $boulder;
+      font-size: 10px;
+      span {
+        padding-left: 10px;
+      }
+      .span__border {
+        border-right: 1px solid $boulder;
+        padding-right: 10px;
+      }
     }
-    .footer__dark{
-        background-color: $footer_btm;
-        padding-left: 100px;
-        p{
-            padding-top: 30px;
-            color:$faint;
-            font-size: 16px;
-            text-transform: capitalize;
-            span{
-                padding-left:10px;
-            }
-            .span__border{
-                border-right:1px solid $faint;
-                padding-right:10px;
-            }
-        }
-        a {
-            
-            color:$faint;
-        }
-
+    a {
+      color: $boulder;
+      text-decoration: underline;
     }
+  }
 }
