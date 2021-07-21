@@ -1,0 +1,16 @@
+@import '../../../styles/styles.scss';
+table {
+    width:100%;
+    background-color: $white;
+    th{
+        color:$triple_3;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    td {
+        color:$triple_3;
+        font-size: 14px;
+    }
+
+}
