@@ -1,0 +1,20 @@
+@import "../../styles/index.scss";
+
+footer {
+  background-color: $mine-shaft;
+  color: $silver-chalice;
+  padding-top: 50px;
+
+  .copyright-section {
+    background-color: $mine-shaft-2;
+    padding: 20px;
+
+    p {
+      font-size: 10px;
+      a {
+        color: $silver-chalice;
+        text-decoration: underline;
+      }
+    }
+  }
+}
