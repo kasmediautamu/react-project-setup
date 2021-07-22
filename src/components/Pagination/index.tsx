@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import './pagination.scss';
+import './styles.scss';
 import { usePagination } from './Hook';
 type IPagination ={
     onPageChange:any,
@@ -14,7 +14,7 @@ const Pagination = (props:IPagination) => {
   const {
     onPageChange,
     totalCount,
-    siblingCount = 1,
+    siblingCount,
     currentPage,
     pageSize,
     className
@@ -41,7 +41,7 @@ const Pagination = (props:IPagination) => {
 
   let lastPage = paginationRange[paginationRange.length - 1];
   return (
-    <ul
+    <ul 
       className={classnames('pagination-container', { [className]: className })}
     >
       <li
@@ -55,7 +55,7 @@ const Pagination = (props:IPagination) => {
       {paginationRange.map(pageNumber => {
         
         return (
-          <li
+          <li key={Math.random()}
             className={classnames('pagination-item', {
               selected: pageNumber === currentPage
             })}

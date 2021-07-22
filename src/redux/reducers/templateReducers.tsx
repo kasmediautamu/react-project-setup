@@ -1,9 +1,7 @@
 import { TEMPLATE } from '../../models/template'
 import { ActionTypes} from '../constants/actionTypes'
 const initialState = {
-    templates: [{
-        "body":"soul"
-    }]
+    templates: []
 }
 export interface SET_TEMPLATES {
     readonly type: "SET_TEMPLATES";
