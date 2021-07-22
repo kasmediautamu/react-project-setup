@@ -1,8 +1,9 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
+import templateReducer from '../pages/NewTemplateInfo/templateSlice'
 
 export const store = configureStore({
   reducer: {
-    
+    template: templateReducer,
   },
 });
 
