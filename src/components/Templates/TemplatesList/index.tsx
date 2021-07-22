@@ -1,5 +1,8 @@
-import React, { useEffect, useState } from "react";
-import _edit from "../../../assets/i/edit.svg";
+import React, { useEffect, useState } from "react"
+import { useSelector,useDispatch, TypedUseSelectorHook } from "react-redux"
+import type { RootState } from "../../../redux/store"
+import { setTemplates,selectedTemplate} from "../../../redux/actions/templateActions"
+import _edit from "../../../assets/i/edit.svg"
 import _preview from "../../../assets/i/preview.svg"
 import _editinfo from "../../../assets/i/editInfo.svg"
 import _duplicate from "../../../assets/i/duplicate.svg"
