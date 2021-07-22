@@ -15,11 +15,11 @@ import Api from "../../Api";
 const TemplatesList: React.FC = () => {
   const [show, setShow] = useState(false);
   const [showDocumentationForm, setShowDocumentationForm] = useState(false);
-  const toggle = () =>{
+  const toggle = () => {
     setShow(true)
     setShowDocumentationForm(false)
   }
-  const toggleForm =()=>{
+  const toggleForm = () => {
     setShowDocumentationForm(true)
     //  setShow(false)
   }
@@ -70,37 +70,37 @@ const TemplatesList: React.FC = () => {
     <div className="table__wrapper">
       <table>
         <thead>
-        <tr>
-          <th>template name</th>
-          <th>version</th>
-          <th>document type</th>
-          <th>status</th>
-          <th>date</th>
-          <th></th>
-        </tr>
+          <tr>
+            <th>template name</th>
+            <th>version</th>
+            <th>document type</th>
+            <th>status</th>
+            <th>date</th>
+            <th></th>
+          </tr>
         </thead>
         <tbody>
-        <tr>
-          <td>2020 Admin Summary</td>
-          <td>1.0 - Current</td>
-          <td>Admin Summary</td>
-          <td>Completed</td>
-          <td>01/30/20</td>
-          <td>
-            <img src={_edit} alt="" />
-          </td>
-        </tr>
-        <tr>
-          <td>2020 Admin Summary</td>
-          <td>1.0 - Current</td>
-          <td>Admin Summary</td>
-          <td>Completed</td>
-          <td>01/30/20</td>
-          <td className="dialog__anchor">
-            <img src={_edit} alt="" onClick={toggle} />
-            {show ? <Dialog _className="dialog"><EditMenu/></Dialog> : null}
-          </td>
-        </tr>
+          <tr>
+            <td>2020 Admin Summary</td>
+            <td>1.0 - Current</td>
+            <td>Admin Summary</td>
+            <td>Completed</td>
+            <td>01/30/20</td>
+            <td>
+              <img src={_edit} alt="" />
+            </td>
+          </tr>
+          <tr>
+            <td>2020 Admin Summary</td>
+            <td>1.0 - Current</td>
+            <td>Admin Summary</td>
+            <td>Completed</td>
+            <td>01/30/20</td>
+            <td className="dialog__anchor">
+              <img src={_edit} alt="" onClick={toggle} />
+              {show ? <Dialog _className="dialog"><EditMenu /></Dialog> : null}
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
