@@ -1,0 +1,16 @@
+<svg id="ic_delete" data-name="ic delete" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+      <clipPath id="clip-path">
+        <rect id="Rectangle_7" data-name="Rectangle 7" width="20" height="20" transform="translate(908 443)" fill="#a4b9c9"/>
+      </clipPath>
+    </defs>
+    <g id="ic_delete-2" data-name="ic delete" transform="translate(-908 -443)" clip-path="url(#clip-path)">
+      <g id="delete" transform="translate(907.091 442.091)">
+        <path id="Path_4" data-name="Path 4" d="M17.272,6.363a.909.909,0,0,0-.909.909V17.445a1.745,1.745,0,0,1-1.827,1.644H7.281a1.745,1.745,0,0,1-1.827-1.644V7.272a.909.909,0,0,0-1.818,0V17.445a3.562,3.562,0,0,0,3.645,3.463h7.254a3.562,3.562,0,0,0,3.645-3.463V7.272A.909.909,0,0,0,17.272,6.363Z" fill="#a4b9c9"/>
+        <path id="Path_5" data-name="Path 5" d="M18.181,3.636H14.545V1.818a.909.909,0,0,0-.909-.909H8.181a.909.909,0,0,0-.909.909V3.636H3.636a.909.909,0,1,0,0,1.818H18.181a.909.909,0,1,0,0-1.818Zm-9.09,0V2.727h3.636v.909Z" fill="#a4b9c9"/>
+        <path id="Path_6" data-name="Path 6" d="M10,15.454V9.09a.909.909,0,0,0-1.818,0v6.363a.909.909,0,1,0,1.818,0Z" fill="#a4b9c9"/>
+        <path id="Path_7" data-name="Path 7" d="M13.636,15.454V9.09a.909.909,0,1,0-1.818,0v6.363a.909.909,0,1,0,1.818,0Z" fill="#a4b9c9"/>
+      </g>
+    </g>
+  </svg>
+  
