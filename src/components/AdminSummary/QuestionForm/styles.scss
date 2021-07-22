@@ -1,0 +1,11 @@
+@import '../../../styles/index.scss';
+.question__form-dialog{
+    position:fixed;
+    top:0%;
+    right:0%;
+    bottom:0%;
+    background-color: $white;
+    padding:20px;
+    -webkit-box-shadow: 3px 10px 15px -4px #000000; 
+    box-shadow: 3px 10px 15px -4px #000000;
+}
