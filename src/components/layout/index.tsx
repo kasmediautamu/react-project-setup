@@ -1,6 +1,4 @@
 import React, { ReactNode } from "react"
-import Navigation from "../Navigation"
-import Footer from "../Footer"
 
 interface Props {
   children: ReactNode;
@@ -10,11 +8,9 @@ interface Props {
 const Layout = ({ children }: Props) => {
   return(
     <>
-      <Navigation/>
       <main>
         {children}
       </main>
-      <Footer/>
     </>
   )
 }

@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react'
 import { Switch, BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
+import Footer from './components/Footer'
 import Navigation from './components/Navigation'
 import Templates from './components/Templates'
 import TemplatesList from './components/Templates/TemplatesList'
@@ -32,6 +33,7 @@ const Routes: React.FC = () => {
 
           <Route> 404 Not Found! </Route>
         </Switch>
+        <Footer/>
       </Suspense>
     </Router>
   )
