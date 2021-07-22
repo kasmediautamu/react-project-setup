@@ -1,6 +1,9 @@
 Node Version = 16.0.0
 npm version  = 7.10.0
 
+## Runserver
+Run json-server --watch data.json inside data directory
+##
 Run the command below to start the project
 npm install --legacy-peer-deps
 
