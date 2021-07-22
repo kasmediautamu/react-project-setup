@@ -1,5 +1,8 @@
-import React, { useState } from "react";
-import _edit from "../../../assets/i/edit.svg";
+import React, { useEffect, useState } from "react"
+import { useSelector,useDispatch, TypedUseSelectorHook } from "react-redux"
+import type { RootState } from "../../../redux/store"
+import { setTemplates,selectedTemplate} from "../../../redux/actions/templateActions"
+import _edit from "../../../assets/i/edit.svg"
 import _preview from "../../../assets/i/preview.svg"
 import _editinfo from "../../../assets/i/editInfo.svg"
 import _duplicate from "../../../assets/i/duplicate.svg"
@@ -8,6 +11,7 @@ import _view from "../../../assets/i/view.svg"
 import Dialog from "../../Hidden";
 import "./styles.scss";
 import CustomerDocumentationForm from "../CustomerDocumentationForm";
+import Api from "../../Api";
 const TemplatesList: React.FC = () => {
   const [show, setShow] = useState(false);
   const [showDocumentationForm, setShowDocumentationForm] = useState(false);
@@ -19,6 +23,19 @@ const TemplatesList: React.FC = () => {
     setShowDocumentationForm(true)
     //  setShow(false)
   }
+  //fetching data from api
+  const fetchData = async () => {
+    try {
+      const response = await Api('/templates')
+      return response.data
+    } catch (error) {
+      console.log(error);
+    }
+    // dispatchEvent(templatesData(response))
+  };
+  useEffect(()=>{
+    
+  },[])
   
   function EditMenu(){
       return (

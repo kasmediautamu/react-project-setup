@@ -5,7 +5,7 @@ import './styles.scss'
 type ITemplates ={
 children?:any
 }
-const Templates = (props:ITemplates) => {
+const Templates= (props:ITemplates) => {
     const {children} = props
     return (
         <>
@@ -13,7 +13,6 @@ const Templates = (props:ITemplates) => {
             <Form />
             {children}
         </div>
-        <Footer />
         </>
     )
 }

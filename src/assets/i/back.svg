@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+      <clipPath id="clip-path">
+        <rect id="Rectangle_13" data-name="Rectangle 13" width="20" height="20" transform="translate(1522 340)" fill="#a4b9c9"/>
+      </clipPath>
+    </defs>
+    <g id="ic_expand_collapse" data-name="ic expand/ collapse" transform="translate(-1522 -340)" clip-path="url(#clip-path)">
+      <g id="up-arrow" transform="translate(1522 340)">
+        <g id="Group_10" data-name="Group 10">
+          <g id="Group_9" data-name="Group 9">
+            <path id="Path_8" data-name="Path 8" d="M10,0A10,10,0,1,0,20,10,10.011,10.011,0,0,0,10,0Zm0,18.451A8.451,8.451,0,1,1,18.451,10,8.461,8.461,0,0,1,10,18.451Z" fill="#a4b9c9"/>
+          </g>
+        </g>
+        <g id="Group_12" data-name="Group 12">
+          <g id="Group_11" data-name="Group 11">
+            <path id="Path_9" data-name="Path 9" d="M14.423,11.069,10.55,7.2a.774.774,0,0,0-1.092,0L5.585,11.069a.775.775,0,0,0,1.092,1.092L10,8.838l3.331,3.323a.772.772,0,0,0,1.092-1.092Z" fill="#a4b9c9"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+  
