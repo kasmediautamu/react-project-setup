@@ -15,7 +15,7 @@ export interface SET_TEMPLATES {
     payload:TEMPLATE
   }
   
-  export const templatesReducer = (state = initialState, action:SET_TEMPLATES) => {
+export const templatesReducer = (state = initialState, action:SET_TEMPLATES) => {
     switch (action.type) {
         case ActionTypes.SET_TEMPLATES:
             return { ...state, templates: action.payload }
