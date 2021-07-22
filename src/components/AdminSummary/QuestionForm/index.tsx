@@ -1,5 +1,4 @@
 import "./styles.scss";
-import Hidden from "../../Hidden";
 import Input from "../../BaseForm/InputField";
 import Dropdown from "../../BaseForm/Dropdown";
 import Button from "../../BaseForm/Button";
@@ -13,14 +12,17 @@ const QuestionForm = () => {
       <form className="question-form">
         <p className="form__title">Add Question</p>
         <div className="question__detail">
-          <p>Question ID</p>
-          <p>1.0</p>
+          <p className="id__label">Question ID</p>
+          <p className="idnumber">1.0</p>
         </div>
+       
         <div className="question__detail">
-          <p>Required?</p>
+          {/* <p>Required?</p> */}
           <img src={_toggle} alt="" />
         </div>
+       
         <Input type="text" _name="question" _placeholder="Enter Question..." />
+
         <Dropdown options={[""]} />
         <div className="form__buttons">
           <Button primary="button">Save</Button>

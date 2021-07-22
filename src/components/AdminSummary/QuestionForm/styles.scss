@@ -8,4 +8,71 @@
     padding:20px;
     -webkit-box-shadow: 3px 10px 15px -4px #000000; 
     box-shadow: 3px 10px 15px -4px #000000;
+    .question-form{
+        .form__title{
+            font-size: 20px;
+            color:$black;
+            font-weight: bold;
+            line-height: 27px;
+            border-bottom: 1px solid $luminus;
+            padding-bottom: 20px;
+            margin-bottom:15px;
+        }
+        .question__detail{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-bottom: 15px;
+            width:100%;
+            p{
+                font-size: 14px;
+                line-height: 19px;
+                color:$greyishdark;
+            }
+        }
+        .form-select{
+            background-color: $athens-gray;
+            font-size: 14px;
+            color:$triple_9;
+            padding:15px;
+            border:none;
+            option{
+                font-size: 14px;
+                color:$triple_9;
+                line-height: 19px;
+            }
+        }
+        .form__buttons{
+            padding-top:40px;
+            button{
+                color:$white;
+                font-size:14px;
+                line-height:19px;
+                color:$blue;
+                border: 1px solid $blue;
+            }
+            button:first-child{
+                margin-right:10px;
+                color:$white;
+                background-color: $blue;
+                padding-right:30px;
+                padding-left:30px;
+            }
+            button:last-child{
+                padding-right:23px;
+                padding-left:23px;
+            }
+        }
+        .idnumber{
+            border-radius: 4px;
+            background-color: $athens-gray;
+            padding:14px;
+        }
+        .id__label{
+            padding-top: 14px;
+        }
+    }
+
+
+
 }
