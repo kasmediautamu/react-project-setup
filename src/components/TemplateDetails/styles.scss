@@ -1,0 +1,25 @@
+@import "../../styles/index.scss";
+
+.template-info,
+.template-sections {
+  margin: 16px 0 0;
+  border-bottom: 1px solid $luminus;
+  h4 {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 14px;
+
+    .label {
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+}

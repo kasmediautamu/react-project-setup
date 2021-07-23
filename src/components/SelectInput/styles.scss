@@ -4,7 +4,10 @@
   position: relative;
   background-color: $athens-gray;
   border-radius: 4px;
+  width: 100%;
   flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 50%;
 
   select {
     appearance: none;
