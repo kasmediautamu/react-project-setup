@@ -3,6 +3,7 @@ import './styles.scss'
 const SearchResults =()=>{
     return(
         <div className="table__wrapper">
+            <p className="results__description">4 Templates found for <span>"Consumer Directed Health Care"</span></p>
             <table>
           <thead>
             <tr>
@@ -16,7 +17,7 @@ const SearchResults =()=>{
           </thead>
           <tbody>
                 <tr key={Math.random()}>
-                  <td>name</td>
+                  <td className="td__blue">name</td>
                   <td>version</td>
                   <td>template</td>
                   <td>status</td>

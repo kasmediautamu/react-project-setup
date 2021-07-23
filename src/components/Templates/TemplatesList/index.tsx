@@ -113,7 +113,7 @@ const TemplatesList: React.FC = () => {
             {currentTableData.map((template) => {
               return (
                 <tr key={Math.random()}>
-                  <td>{template.name}</td>
+                  <td className="td__blue">{template.name}</td>
                   <td>{template.version}</td>
                   <td>{template.type}</td>
                   <td>{template.status}</td>
