@@ -15,3 +15,10 @@ export const selectedTemplate = (template:TEMPLATE) => {
         payload:template,
     }
 }
+export const setSearchResultsTemplates = (searchResultsTemplates:TEMPLATE[]) => {
+    return {
+        type:ActionTypes.SET_SEARCH_RESULTS_TEMPLATES,
+        payload:searchResultsTemplates,
+    }
+}
+

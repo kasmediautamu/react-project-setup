@@ -1,7 +1,8 @@
 import React from 'react';
 import classnames from 'classnames';
-import './pagination.scss';
+import './styles.scss';
 import { usePagination } from './Hook';
+import BaseDropDown from '../BaseForm/Dropdown';
 type IPagination ={
     onPageChange:any,
     totalCount:number,
@@ -11,10 +12,11 @@ type IPagination ={
     className:string
 }
 const Pagination = (props:IPagination) => {
+  const selectOptions =['10 Per Page','25 Per Page','50 Per Page']
   const {
     onPageChange,
     totalCount,
-    siblingCount = 1,
+    siblingCount,
     currentPage,
     pageSize,
     className
@@ -41,7 +43,11 @@ const Pagination = (props:IPagination) => {
 
   let lastPage = paginationRange[paginationRange.length - 1];
   return (
-    <ul
+   <div className="pagination__wrapper">
+     <div className="page-size__selector">
+     <BaseDropDown options={selectOptions}/>
+     </div>
+      <ul 
       className={classnames('pagination-container', { [className]: className })}
     >
       <li
@@ -55,7 +61,7 @@ const Pagination = (props:IPagination) => {
       {paginationRange.map(pageNumber => {
         
         return (
-          <li
+          <li key={Math.random()}
             className={classnames('pagination-item', {
               selected: pageNumber === currentPage
             })}
@@ -74,6 +80,7 @@ const Pagination = (props:IPagination) => {
         <div className="arrow right" />
       </li>
     </ul>
+   </div>
   );
 };
 

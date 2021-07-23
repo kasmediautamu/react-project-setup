@@ -3,5 +3,18 @@
     width:100%;
     input{
         @extend .form-control;
+        @extend .shadow-none;
+        // border:1px solid #e0e0e0 !important;
+        outline: none !important;
     }
+    > input:focus{
+        outline:none !important;
+    }
+ img{
+     cursor:pointer;
+ }
+ .btn-icon{
+     background-color: $white;
+     padding: 1px;
+ }
 }

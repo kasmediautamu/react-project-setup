@@ -7,6 +7,7 @@ import _toggoleInctive from "../../../assets/i/inactivetoggle.svg"
 import Dialog from "../../Hidden";
 
 const QuestionForm = () => {
+  const questionOptions =['Display only','Text','Numeric','Phone Number','Address','Email Address','Date','Dollar','Yes/No Choices','Multiple Choices','Checkboxes','Dropdown Selection','Dropdown Multi-Selection']
   return (
     <Dialog _className="question__form-dialog">
       <form className="question-form">
@@ -23,7 +24,7 @@ const QuestionForm = () => {
        
         <Input type="text" _name="question" _placeholder="Enter Question..." />
 
-        <Dropdown options={[""]} />
+        <Dropdown options={questionOptions} />
         <div className="form__buttons">
           <Button primary="button">Save</Button>
           <Button primary="button">Cancel</Button>
