@@ -4,7 +4,7 @@ type IBaseDropDown = {
 const BaseDropDown = (props:IBaseDropDown) => {
     const {options} =props
   return (
-    <select name="" className="form-select">
+    <select name="" className="form-select shadow-none">
       <option selected>Open this select menu</option>
       <option value="1">One</option>
       <option value="2">Two</option>

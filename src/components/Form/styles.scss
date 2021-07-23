@@ -32,8 +32,11 @@
                 font-size: 14px;
                 line-height: 19px;
                 border-left: none;
-
+                border:1px solid #e0e0e0 !important;
+                border-left:none !important;
             }
+            
+                
             .input-group-text{
                 background-color:$white;
             }

@@ -241,10 +241,10 @@
             "date": "01/30/20"
         }
     ],
-    "pdf": [
+    "pdfs": [
         {
             "id": 1,
-            "name": "2020 Admin Summary",
+            "name": "2021 Admin Summary",
             "version": "1.0 -Current",
             "date": "01/30/21",
             "img": "_pdf"

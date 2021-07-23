@@ -1,10 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { useSelector, useDispatch, TypedUseSelectorHook } from "react-redux";
-import type { RootState } from "../../../redux/store";
-import {
-  setTemplates,
-  selectedTemplate,
-} from "../../../redux/actions/templateActions";
+import { useDispatch } from "react-redux";
+import { setTemplates } from "../../../redux/actions/templateActions";
 import Pagination from "../../Pagination";
 import _edit from "../../../assets/i/edit.svg";
 import _preview from "../../../assets/i/preview.svg";
@@ -17,10 +13,12 @@ import "./styles.scss";
 import CustomerDocumentationForm from "../CustomerDocumentationForm";
 import Api from "../../Api";
 import { useAppSelector } from "../../../app/hooks";
+
 const TemplatesList: React.FC = () => {
   let PageSize = 10;
   const dispatch = useDispatch();
-  const [show, setShow] = useState(false);
+  const [remove,setRemove] =useState("")
+  const [show, hide] = useState(false)
   const [showDocumentationForm, setShowDocumentationForm] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -35,13 +33,26 @@ const TemplatesList: React.FC = () => {
   }, [PageSize, currentPage, templates]);
 
   const toggle = () => {
-    setShow(true);
-    setShowDocumentationForm(false);
+    hide(!show) 
+    console.log(show);
   };
-  const toggleForm = () => {
-    setShowDocumentationForm(true);
-    //  setShow(false)
+  
+  const toggleDisplayDocumentationForm = () => {
+    setShowDocumentationForm(!showDocumentationForm);
+    setRemove("remove")
+    
   };
+  function DocumentationFormToggle(){
+    if( showDocumentationForm){
+      return(
+          <Dialog _className="documentation__form--dialog">
+            <CustomerDocumentationForm />
+          </Dialog>
+      )
+    } else {
+      return null
+    }
+   }
   //fetching data from api
   const fetchTemplates = async () => {
     try {
@@ -76,15 +87,11 @@ const TemplatesList: React.FC = () => {
           <img src={_view} alt="" />
           <p>View Saved Documents</p>
         </div>
-        <div className="edit__menu--item" onClick={toggleForm}>
+        <div className="edit__menu--item" onClick={toggleDisplayDocumentationForm}>
           <img src={_save} alt="" />
           <p>Save Customer Document</p>
         </div>
-        {showDocumentationForm ? (
-          <Dialog _className="documentation__form--dialog">
-            <CustomerDocumentationForm />
-          </Dialog>
-        ) : null}
+        <DocumentationFormToggle/>
       </div>
     );
   }
@@ -113,27 +120,16 @@ const TemplatesList: React.FC = () => {
                   <td>{template.date}</td>
                   <td className="dialog__anchor">
                     <img src={_edit} alt="" onClick={toggle} />
-                    {show ? (
-                      <Dialog _className="dialog">
-                        <EditMenu />
-                      </Dialog>
-                    ) : null}
                   </td>
                 </tr>
               );
             })}
-            {/* <tr>
-          <td>2020 Admin Summary</td>
-          <td>1.0 - Current</td>
-          <td>Admin Summary</td>
-          <td>Completed</td>
-          <td>01/30/20</td>
-          <td className="dialog__anchor">
-            <img src={_edit} alt="" onClick={toggle} />
-            {show ? <Dialog _className="dialog"><EditMenu/></Dialog> : null}
-          </td>
-        </tr> */}
           </tbody>
+          {show ? (
+                      <Dialog _className="dialog">
+                        <EditMenu />
+                      </Dialog>
+                    ) : null}
         </table>
       </div>
       <Pagination
@@ -141,8 +137,8 @@ const TemplatesList: React.FC = () => {
         currentPage={currentPage}
         totalCount={templates.length}
         pageSize={PageSize}
-        onPageChange={page => setCurrentPage(page)}
-        siblingCount = {1}
+        onPageChange={(page) => setCurrentPage(page)}
+        siblingCount={1}
       />
     </>
   );
