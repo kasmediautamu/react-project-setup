@@ -5,6 +5,7 @@ import AddQuestion from './components/AdminSummary/AddQuestion'
 import Footer from './components/Footer'
 import Navigation from './components/Navigation'
 import Templates from './components/Templates'
+import SearchResults from './components/Templates/SearchResults'
 import TemplatesList from './components/Templates/TemplatesList'
 import TemplatesPDF from './components/Templates/TemplatesPDF'
 import NewTemplateInfo from './pages/NewTemplateInfo'
@@ -41,6 +42,7 @@ const Routes: React.FC = () => {
                     component={TemplatesPDF}
                   />
                   <Route path={`/templates-list`} component={TemplatesList} />
+                  <Route path={`/search-results`} component={SearchResults} />
                   
                   {/* <Redirect exact from={path + "/*"} to={path} /> */}
                 </Switch>

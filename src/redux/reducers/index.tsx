@@ -1,9 +1,13 @@
 import { combineReducers } from 'redux'
-import { templatesReducer,selectedTemplateReducer } from './templateReducers'
+import { pdfsReducer, selectedPdfReducer } from './pdfReducers'
+import { templatesReducer,selectedTemplateReducer, searchResultstemplatesReducer } from './templateReducers'
 
 const reducers = combineReducers({
     allTemplates: templatesReducer,
-    template:selectedTemplateReducer
+    template:selectedTemplateReducer,
+    SearchTemplatesSearchResults:searchResultstemplatesReducer,
+    allPdfs:pdfsReducer,
+    pdf:selectedPdfReducer
 })
 
 export default reducers
