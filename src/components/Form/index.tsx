@@ -5,15 +5,14 @@ import InputGroup from "../BaseForm/InputGroup";
 import _toggleL from "../../assets/i/toggleleft.svg";
 import _squares from "../../assets/i/squares.svg";
 import _menu from "../../assets/i/menu.svg";
+import _activesquares from "../../assets/i/activesquares.svg"
+import _activemenu from "../../assets/i/activemenu.svg"
 import { FormEvent, useState } from "react";
-import "./styles.scss";
 import { useDispatch } from "react-redux";
 import { useAppSelector } from "../../app/hooks";
-import {
-  setSearchResultsTemplates,
-  setTemplates,
-} from "../../redux/actions/templateActions";
-import { searchResultstemplatesReducer } from "../../redux/reducers/templateReducers";
+import { setSearchResultsTemplates } from "../../redux/actions/templateActions";
+
+import "./styles.scss";
 
 const Form = () => {
   const dispatch = useDispatch();
@@ -57,6 +56,28 @@ const Form = () => {
     }
     return formhead;
   };
+  function PdfMenuIcon(){
+    if(Location.pathname ==="/"){
+      return(
+        <img src={_squares} alt="" />
+      )
+    } else{
+      return(
+        <img src={_activesquares} alt="" />
+      )
+    }
+  }
+  function TemplateListIcon(){
+    if(Location.pathname ==="/"){
+      return(
+        <img src={_menu} alt="" />
+      )
+    } else{
+      return(
+        <img src={_activemenu} alt="" />
+      )
+    }
+  }
   function TemplateButton() {
     if (Location.pathname === "/" || Location.pathname === "/templates-list") {
       return (
@@ -102,6 +123,7 @@ const Form = () => {
       history.push("/search-results");
     }
   };
+  
   return (
     <form className="search__form" onSubmit={onSubmit}>
       <div className="search__form--header">
@@ -137,10 +159,10 @@ const Form = () => {
           </div>
           <div className="menu__icons">
             <Link to={`/`}>
-              <img src={_squares} alt="" />
+              <PdfMenuIcon/>
             </Link>
             <Link to={`/templates-list`}>
-              <img src={_menu} alt="" />
+              <TemplateListIcon/>
             </Link>
           </div>
         </div>
