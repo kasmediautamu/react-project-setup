@@ -4,6 +4,7 @@ import Layout from "../../components/layout"
 import SelectInput from "../../components/SelectInput"
 import SidePanel from "../../components/SidePanel"
 import FileUploadInput from "../../components/UploadInput"
+import TemplateDetails from "../../components/TemplateDetails"
 import { useAppDispatch, useAppSelector } from "../../app/hooks"
 import { createTemplate } from './templateSlice'
 import './styles.scss'
@@ -79,6 +80,7 @@ const NewTemplateInfo: React.FC = () => {
         </section>
         {showPanel ? <SidePanel heading="Import" >
           <FileUploadInput />
+          <TemplateDetails />
         </SidePanel> : null}
       </Layout>
     </>

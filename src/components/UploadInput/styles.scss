@@ -1,1 +1,34 @@
 @import '../../styles/index.scss';
+
+.upload {
+  background-color: $greyish;
+  border: 2px dashed $silver;
+  height: 120px;
+  position: relative;
+  border-radius: 6px;
+  margin: 0 0 30px;
+
+  input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .dummy-upload {
+    height: 100%;
+    font-size: 14px;
+    color: $dusty-gray;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .select-file-message {
+      color: $blue;
+    }
+  }
+}
