@@ -1,15 +1,25 @@
+
 type IBaseDropDown = {
-    options:[any]
+    options:any
 };
 const BaseDropDown = (props:IBaseDropDown) => {
     const {options} =props
-  return (
-    <select name="" className="form-select shadow-none">
-      <option selected>Open this select menu</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
-    </select>
-  );
+  // return (
+  //   <select name="" className="form-select shadow-none">
+  //      {options.map((option) => {
+  //             return (
+  //               <div key={Math.random()}className="selected__option">
+  //                 <option value="">{option}</option>
+  //               </div>
+  //             );
+  //           })}
+  //   </select>
+  // );
+  const RenderOptions = options.map((option:any)=><option key={Math.random()}>{option}</option>)
+    return(
+       <select name="" id="" className="form-select shadow-none">
+           {RenderOptions}
+       </select>  
+    )
 };
 export default BaseDropDown;
