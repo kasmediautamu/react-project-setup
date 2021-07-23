@@ -34,7 +34,6 @@ const TemplatesList: React.FC = () => {
 
   const toggle = () => {
     hide(!show) 
-    console.log(show);
   };
   
   const toggleDisplayDocumentationForm = () => {
@@ -57,7 +56,6 @@ const TemplatesList: React.FC = () => {
   const fetchTemplates = async () => {
     try {
       const response = await Api("/templates");
-      console.log(response.data);
       dispatch(setTemplates(response.data));
     } catch (error) {
       console.log(error);

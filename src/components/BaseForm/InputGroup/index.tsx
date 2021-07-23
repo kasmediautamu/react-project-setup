@@ -1,15 +1,18 @@
 import "./styles.scss";
 import _search from '../../../assets/i/search.svg'
+import { ChangeEventHandler } from "react";
 type INPUTS ={
   placeholder?:string
-  onclick?:any
+  _name?:any
+  valuechange?:ChangeEventHandler
+  _value?:string
 }
 function InputGroup(props: INPUTS) {
-  const {placeholder,onclick} = props
+  const {placeholder,_name,valuechange,_value} = props
   return (
     <div className="input-group mb-3">
-      <span className="input-group-text"><img src={_search} alt="" onClick={onclick}/></span>
-      <input {...props} placeholder={placeholder} />
+      <span className="input-group-text"><button className="btn-icon"><img src={_search} alt=""/></button></span>
+      <input {...props} name={_name} onChange={valuechange} placeholder={placeholder} value={_value}/>
     </div>
   );
 }

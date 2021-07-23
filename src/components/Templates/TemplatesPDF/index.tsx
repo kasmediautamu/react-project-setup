@@ -21,7 +21,6 @@ const TemplatesPDF = () => {
   const fetchPdfs = async () => {
     try {
       const response = await Api("/pdfs");
-      console.log(response.data);
       dispatch(setPdfs(response.data));
     } catch (error) {
       console.log(error);
