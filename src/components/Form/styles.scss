@@ -86,4 +86,11 @@
         }
         
     }
+    .back-to-template__btn{
+        background-color: $white !important;
+        color:$blue !important;
+        border: 1px solid $blue;
+        padding-left:30px !important;
+        padding-right:28px !important;
+    }
 }

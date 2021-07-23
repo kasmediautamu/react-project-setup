@@ -1,0 +1,26 @@
+@import '../../../styles/index.scss';
+.table__wrapper{
+    background-color: $white;
+    border-radius:8px;
+    padding:20px;
+    margin:25px 0px 20px 0px ;
+table {
+    width:100%;
+    
+    th{
+        color:$triple_3;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    th,td {
+        color:$triple_3;
+        font-size: 14px;
+        padding-bottom: 24px;
+        padding-top:24px;
+        border-bottom: 1px solid $luminus;
+    }
+   
+
+}
+}

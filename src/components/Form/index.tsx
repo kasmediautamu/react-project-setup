@@ -38,6 +38,11 @@ const Form =()=>{
     const changeLocation =()=>{
        return history.push('/new-template-info')
    }
+   const searchTemplates =()=>{
+       if(Location.pathname ==="/search-results" || Location.pathname ==="/templates-list"){
+        history.push('/search-results')
+       }
+   }
     return (
         <form className="search__form">
             <div className="search__form--header">
@@ -46,7 +51,7 @@ const Form =()=>{
             </div>
             <div className="search__form--fields">
                 <div className="left">
-                <InputGroup placeholder={`Search by file name or template content`}/>
+                <InputGroup placeholder={`Search by file name or template content`} onclick={searchTemplates}/>
                 </div>
                 <div className="right">
                     <div className="select-boxes">
