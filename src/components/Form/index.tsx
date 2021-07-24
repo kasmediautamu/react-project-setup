@@ -10,11 +10,11 @@ import _activemenu from '../../assets/i/activemenu.svg'
 import { FormEvent, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useAppSelector } from '../../app/hooks'
-import { setSearchResultsTemplates } from '../../redux/actions/templateActions'
+import { setSearchResultsTemplates } from '../../store/actions/templateActions'
 
 import './styles.scss'
 
-const Form = () => {
+const Form = (props) => {
   const dispatch = useDispatch()
   const pdfTypes = ['All Types', 'Admin Summary', 'BSS']
   const pdfStatuses = ['All Statuses', 'Completed', 'Incomplete']
@@ -30,6 +30,7 @@ const Form = () => {
   const [types, setTypes] = useState('All Types')
   const [status, setStatuses] = useState('All Statuses')
   const { searchTerm, pdftype, pdfstatus } = formData
+  const { onSetView } = props
   const onChange = (e: FormEvent<EventTarget>) => {
     let target = e.target as HTMLInputElement
     setFormData({ ...formData, [target.name]: target.value })
@@ -102,6 +103,7 @@ const Form = () => {
       ...formData,
     })
     searchData(templates, formData.searchTerm)
+    onSetView('search')
 
     if (Location.pathname === '/search-results' || Location.pathname === '/templates-list') {
       history.push('/search-results')
@@ -135,12 +137,12 @@ const Form = () => {
             <img src={_toggleL} alt="" />
           </div>
           <div className="menu__icons">
-            <Link to={`/`}>
+            <a href="#" onClick={() => onSetView('grid')}>
               <PdfMenuIcon />
-            </Link>
-            <Link to={`/templates-list`}>
+            </a>
+            <a href="#" onClick={() => onSetView('list')}>
               <TemplateListIcon />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { setTemplates } from '../../../redux/actions/templateActions'
+import { setTemplates } from '../../../store/actions/templateActions'
 import Pagination from '../../Pagination'
 import _edit from '../../../assets/i/edit.svg'
 import _preview from '../../../assets/i/preview.svg'

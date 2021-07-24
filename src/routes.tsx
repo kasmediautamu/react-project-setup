@@ -30,17 +30,7 @@ const Routes: React.FC = () => {
           />
           <Route
             path="/"
-            render={({ match: { path } }) => (
-              <Templates>
-                <Switch>
-                  <Route path={path + '/'} component={TemplatesPDF} />
-                  <Route path={`/templates-list`} component={TemplatesList} />
-                  <Route path={`/search-results`} component={SearchResults} />
-
-                  {/* <Redirect exact from={path + "/*"} to={path} /> */}
-                </Switch>
-              </Templates>
-            )}
+            component={Templates}
           />
           <Route> 404 Not Found! </Route>
         </Switch>

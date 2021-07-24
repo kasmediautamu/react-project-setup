@@ -66,7 +66,8 @@ const SearchResults = () => {
   return (
     <div className="table__wrapper">
       <p className="results__description">
-        {templates.length} Templates found for <span>"Consumer Directed Health Care"</span>
+        {/* {templates.length}  */}
+        Templates found for <span>"Consumer Directed Health Care"</span>
       </p>
       <table>
         <thead>
@@ -80,7 +81,8 @@ const SearchResults = () => {
           </tr>
         </thead>
         <tbody>
-          {templates.map((template) => {
+            search is coming soon
+          {/* {templates.map((template) => {
             return (
               <tr key={Math.random()}>
                 <td className="td__blue">{template.name}</td>
@@ -93,7 +95,7 @@ const SearchResults = () => {
                 </td>
               </tr>
             )
-          })}
+          })} */}
         </tbody>
         {show ? (
           <Dialog _className="dialog">

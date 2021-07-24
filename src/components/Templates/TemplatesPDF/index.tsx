@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux'
-import { setPdfs } from '../../../redux/actions/pdfActions'
+import { setPdfs } from '../../../store/actions/pdfActions'
 import Pagination from '../../Pagination'
 import Api from '../../Api'
 import { useAppSelector } from '../../../app/hooks'
@@ -29,6 +29,7 @@ const TemplatesPDF = () => {
   useEffect(() => {
     fetchPdfs()
   }, [])
+
   return (
     <>
       <div className="templates">
