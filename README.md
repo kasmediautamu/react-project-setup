@@ -1,12 +1,15 @@
 Node Version = 16.0.0
 npm version  = 7.10.0
 
-## Runserver
-Run json-server --watch data.json inside data directory
-##
+## Install node modules
 Run the command below to start the project
 npm install --legacy-peer-deps
 
+## Run data server
+`npm run data`
+
+## Run the app
+`npm start`
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
