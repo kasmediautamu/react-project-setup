@@ -62,11 +62,10 @@ const SearchResults = () => {
   const templates = useAppSelector(
     (state: any) => state.SearchTemplatesSearchResults.searchResultsTemplates
   )
-  console.log(templates)
   return (
     <div className="table__wrapper">
       <p className="results__description">
-        {/* {templates.length}  */}
+        {templates.length}
         Templates found for <span>"Consumer Directed Health Care"</span>
       </p>
       <table>
@@ -81,8 +80,7 @@ const SearchResults = () => {
           </tr>
         </thead>
         <tbody>
-            search is coming soon
-          {/* {templates.map((template) => {
+          {templates.map((template) => {
             return (
               <tr key={Math.random()}>
                 <td className="td__blue">{template.name}</td>
@@ -95,7 +93,7 @@ const SearchResults = () => {
                 </td>
               </tr>
             )
-          })} */}
+          })}
         </tbody>
         {show ? (
           <Dialog _className="dialog">

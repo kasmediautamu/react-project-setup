@@ -29,7 +29,7 @@ const Templates = (props: ITemplates) => {
   return (
     <>
       <div className="templates-layout">
-        <Form onSetView={setView} />
+        <Form onSetView={setView} activeView={view} />
         {view === 'grid' && <TemplatesPDF />}
         {view === 'list' && <TemplatesList />}
         {view === 'search' && <SearchResults />}

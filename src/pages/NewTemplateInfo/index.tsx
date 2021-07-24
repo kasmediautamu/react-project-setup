@@ -36,7 +36,6 @@ const NewTemplateInfo: React.FC = () => {
   }
 
   const collectTemplateData = useAppSelector((state) => state.template.templates)
-  console.log(collectTemplateData)
 
   const dispatch = useAppDispatch()
 

@@ -5,7 +5,6 @@ interface Props {
   setField: string
 }
 const SelectInput = ({ setField }: Props) => {
-  console.log(setField)
   const mapSelectedValues = (field) => {
     switch (field) {
       case 'documentType':

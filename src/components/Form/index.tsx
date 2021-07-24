@@ -30,11 +30,10 @@ const Form = (props) => {
   const [types, setTypes] = useState('All Types')
   const [status, setStatuses] = useState('All Statuses')
   const { searchTerm, pdftype, pdfstatus } = formData
-  const { onSetView } = props
+  const { onSetView, activeView } = props
   const onChange = (e: FormEvent<EventTarget>) => {
     let target = e.target as HTMLInputElement
     setFormData({ ...formData, [target.name]: target.value })
-    console.log(formData)
   }
 
   const handleTypesSelect = (e: FormEvent<EventTarget>) => {
@@ -56,14 +55,14 @@ const Form = (props) => {
     return formhead
   }
   function PdfMenuIcon() {
-    if (Location.pathname === '/') {
+    if (activeView === 'grid') {
       return <img src={_squares} alt="" />
     } else {
       return <img src={_activesquares} alt="" />
     }
   }
   function TemplateListIcon() {
-    if (Location.pathname === '/') {
+    if (activeView === 'grid') {
       return <img src={_menu} alt="" />
     } else {
       return <img src={_activemenu} alt="" />
@@ -137,10 +136,10 @@ const Form = (props) => {
             <img src={_toggleL} alt="" />
           </div>
           <div className="menu__icons">
-            <a href="#" onClick={() => onSetView('grid')}>
+            <a href="javascript:void(0)" onClick={() => onSetView('grid')}>
               <PdfMenuIcon />
             </a>
-            <a href="#" onClick={() => onSetView('list')}>
+            <a href="javascript:void(0)" onClick={() => onSetView('list')}>
               <TemplateListIcon />
             </a>
           </div>

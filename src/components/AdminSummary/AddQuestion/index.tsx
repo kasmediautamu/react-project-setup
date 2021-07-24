@@ -13,11 +13,9 @@ const AddQuestion = () => {
   const [showQuestionForm, hideQuestionForm] = useState(false)
   const displayQuestionForm = () => {
     hideQuestionForm(!showQuestionForm)
-    console.log('question form display')
   }
   const toggleHead = () => {
     hide(!show)
-    console.log(show)
   }
   function QuestionFormToggle() {
     if (showQuestionForm) {
