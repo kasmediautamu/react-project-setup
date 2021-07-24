@@ -17,33 +17,26 @@ const Routes: React.FC = () => {
         <Navigation />
         <Switch>
           <Route component={NewTemplateInfo} path="/new-template-info" />
-          <Route path="/admin-summary" 
-            render={({match:{ path }})=>(
+          <Route
+            path="/admin-summary"
+            render={({ match: { path } }) => (
               <AdminSummary>
                 <Switch>
-                  <Route
-                  
-                  path={path + "/"}
-                    component={AddQuestion}
-                    />
+                  <Route path={path + '/'} component={AddQuestion} />
                   {/* routes connected to admin summary go here */}
                 </Switch>
               </AdminSummary>
-            )
-            }
-           />
-          <Route path="/"
+            )}
+          />
+          <Route
+            path="/"
             render={({ match: { path } }) => (
               <Templates>
                 <Switch>
-                  <Route
-                    
-                    path={path + "/"}
-                    component={TemplatesPDF}
-                  />
+                  <Route path={path + '/'} component={TemplatesPDF} />
                   <Route path={`/templates-list`} component={TemplatesList} />
                   <Route path={`/search-results`} component={SearchResults} />
-                  
+
                   {/* <Redirect exact from={path + "/*"} to={path} /> */}
                 </Switch>
               </Templates>
@@ -51,7 +44,7 @@ const Routes: React.FC = () => {
           />
           <Route> 404 Not Found! </Route>
         </Switch>
-        <Footer/>
+        <Footer />
       </Suspense>
     </Router>
   )

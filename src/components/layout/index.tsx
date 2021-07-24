@@ -1,16 +1,14 @@
-import React, { ReactNode } from "react"
+import React, { ReactNode } from 'react'
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode
   // any other props that come into the component
 }
 
 const Layout = ({ children }: Props) => {
-  return(
+  return (
     <>
-      <main>
-        {children}
-      </main>
+      <main>{children}</main>
     </>
   )
 }

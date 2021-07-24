@@ -6,9 +6,7 @@ const Navigation = () => {
   return (
     <div className="navigation">
       <p className="navigation__mini">
-        <Link to={""}>Login</Link>
-        |
-        <Link to={""}>Register</Link>
+        <Link to={''}>Login</Link>|<Link to={''}>Register</Link>
       </p>
       <hr />
       <div className="navigation__main">
@@ -16,9 +14,9 @@ const Navigation = () => {
           <img src={Logo} alt="logo" />
         </div>
         <ul className="navigation__main--list">
-          <Link to={""}>home</Link>
-          <Link to={""}>provider registration</Link>
-          <Link to={""}>contact us</Link>
+          <Link to={''}>home</Link>
+          <Link to={''}>provider registration</Link>
+          <Link to={''}>contact us</Link>
         </ul>
       </div>
     </div>

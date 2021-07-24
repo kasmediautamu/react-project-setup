@@ -1,87 +1,78 @@
-import React from 'react';
-import classnames from 'classnames';
-import './styles.scss';
-import { usePagination } from './Hook';
-import BaseDropDown from '../BaseForm/Dropdown';
-type IPagination ={
-    onPageChange:any,
-    totalCount:number,
-    siblingCount:number,
-    currentPage:number,
-    pageSize:number
-    className:string
+import React from 'react'
+import classnames from 'classnames'
+import './styles.scss'
+import { usePagination } from './Hook'
+import BaseDropDown from '../BaseForm/Dropdown'
+type IPagination = {
+  onPageChange: any
+  totalCount: number
+  siblingCount: number
+  currentPage: number
+  pageSize: number
+  className: string
 }
-const Pagination = (props:IPagination) => {
-  const selectOptions =['10 Per Page','25 Per Page','50 Per Page']
-  const {
-    onPageChange,
-    totalCount,
-    siblingCount,
-    currentPage,
-    pageSize,
-    className
-  } = props;
+const Pagination = (props: IPagination) => {
+  const selectOptions = ['10 Per Page', '25 Per Page', '50 Per Page']
+  const { onPageChange, totalCount, siblingCount, currentPage, pageSize, className } = props
 
   const paginationRange: any[] | any = usePagination({
     currentPage,
     totalCount,
     siblingCount,
-    pageSize
-  });
+    pageSize,
+  })
 
   if (currentPage === 0 || paginationRange.length < 2) {
-    return null;
+    return null
   }
 
   const onNext = () => {
-    onPageChange(currentPage + 1);
-  };
+    onPageChange(currentPage + 1)
+  }
 
   const onPrevious = () => {
-    onPageChange(currentPage - 1);
-  };
+    onPageChange(currentPage - 1)
+  }
 
-  let lastPage = paginationRange[paginationRange.length - 1];
+  let lastPage = paginationRange[paginationRange.length - 1]
   return (
-   <div className="pagination__wrapper">
-     <div className="page-size__selector">
-     <BaseDropDown options={selectOptions}/>
-     </div>
-      <ul 
-      className={classnames('pagination-container', { [className]: className })}
-    >
-      <li
-        className={classnames('pagination-item', {
-          disabled: currentPage === 1
+    <div className="pagination__wrapper">
+      <div className="page-size__selector">
+        <BaseDropDown options={selectOptions} />
+      </div>
+      <ul className={classnames('pagination-container', { [className]: className })}>
+        <li
+          className={classnames('pagination-item', {
+            disabled: currentPage === 1,
+          })}
+          onClick={onPrevious}
+        >
+          <div className="arrow left" />
+        </li>
+        {paginationRange.map((pageNumber) => {
+          return (
+            <li
+              key={Math.random()}
+              className={classnames('pagination-item', {
+                selected: pageNumber === currentPage,
+              })}
+              onClick={() => onPageChange(pageNumber)}
+            >
+              {pageNumber}
+            </li>
+          )
         })}
-        onClick={onPrevious}
-      >
-        <div className="arrow left" />
-      </li>
-      {paginationRange.map(pageNumber => {
-        
-        return (
-          <li key={Math.random()}
-            className={classnames('pagination-item', {
-              selected: pageNumber === currentPage
-            })}
-            onClick={() => onPageChange(pageNumber)}
-          >
-            {pageNumber}
-          </li>
-        );
-      })}
-      <li
-        className={classnames('pagination-item', {
-          disabled: currentPage === lastPage
-        })}
-        onClick={onNext}
-      >
-        <div className="arrow right" />
-      </li>
-    </ul>
-   </div>
-  );
-};
+        <li
+          className={classnames('pagination-item', {
+            disabled: currentPage === lastPage,
+          })}
+          onClick={onNext}
+        >
+          <div className="arrow right" />
+        </li>
+      </ul>
+    </div>
+  )
+}
 
-export default Pagination;
+export default Pagination

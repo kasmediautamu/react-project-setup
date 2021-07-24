@@ -1,4 +1,4 @@
-import './styles.scss';
+import './styles.scss'
 
 const TemplateDetails: React.FC = () => {
   return (
@@ -40,7 +40,6 @@ const TemplateDetails: React.FC = () => {
           <p className="label">Plan Sponsor Contact Info</p>
           <p className="value">22 Questions</p>
         </div>
-        
       </div>
     </>
   )

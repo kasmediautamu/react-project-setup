@@ -1,11 +1,11 @@
 import './styles.scss'
 type IDialog = {
-  children?: any;
-  _className?:string;
-};
+  children?: any
+  _className?: string
+}
 
 function Dialog(props: IDialog) {
-  const { children,_className } = props;
+  const { children, _className } = props
   return <div className={_className}>{children}</div>
 }
-export default Dialog;
+export default Dialog

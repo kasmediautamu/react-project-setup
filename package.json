@@ -14,6 +14,7 @@
     "@types/react-redux": "^7.1.7",
     "axios": "^0.21.1",
     "bootstrap": "^5.0.2",
+    "json-server": "^0.16.3",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",
     "react-dom": "^17.0.2",
@@ -27,7 +28,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "data": "json-server --watch data/data.json",
+    "prettier:base": "prettier --parser typescript --single-quote",
+    "prettier:check": "npm run prettier:base -- --list-different \"src/**/*.{ts,tsx}\"",
+    "prettier:write": "npm run prettier:base -- --write \"src/**/*.{ts,tsx}\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -48,6 +53,7 @@
     "@types/react": "^16.14.11",
     "@types/react-router-dom": "^5.1.8",
     "node-sass": "^6.0.1",
+    "prettier": "^2.3.2",
     "sass": "^1.35.2",
     "sass-loader": "^11.1.1"
   }

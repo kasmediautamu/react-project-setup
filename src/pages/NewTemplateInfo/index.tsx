@@ -1,32 +1,32 @@
-import React, { useState } from "react"
-import Button from "../../components/BaseForm/Button"
-import Layout from "../../components/layout"
-import SelectInput from "../../components/SelectInput"
-import SidePanel from "../../components/SidePanel"
-import FileUploadInput from "../../components/UploadInput"
-import TemplateDetails from "../../components/TemplateDetails"
-import { useAppDispatch, useAppSelector } from "../../app/hooks"
+import React, { useState } from 'react'
+import Button from '../../components/BaseForm/Button'
+import Layout from '../../components/layout'
+import SelectInput from '../../components/SelectInput'
+import SidePanel from '../../components/SidePanel'
+import FileUploadInput from '../../components/UploadInput'
+import TemplateDetails from '../../components/TemplateDetails'
+import { useAppDispatch, useAppSelector } from '../../app/hooks'
 import { createTemplate } from './templateSlice'
 import './styles.scss'
 
 const NewTemplateInfo: React.FC = () => {
   const [showPanel, setShowPanel] = useState(false)
-  const [documentType, setDocumentType] = useState('');
-  const [templateName, setTemplateName] = useState('');
-  const [lineOfBusiness, setLineOfBusiness] = useState('');
+  const [documentType, setDocumentType] = useState('')
+  const [templateName, setTemplateName] = useState('')
+  const [lineOfBusiness, setLineOfBusiness] = useState('')
 
   const displaySelectInput = (field) => {
     switch (field) {
       case 'documentType':
-        return <SelectInput setField="documentType"/>
+        return <SelectInput setField="documentType" />
       case 'lineOfBusiness':
-        return <SelectInput setField="lineOfBusiness"/>
+        return <SelectInput setField="lineOfBusiness" />
       case 'group':
-        return <SelectInput setField="group"/>
+        return <SelectInput setField="group" />
       case 'fontStyle':
-        return <SelectInput setField="fontStyle"/>
+        return <SelectInput setField="fontStyle" />
       default:
-        return <SelectInput setField=""/>
+        return <SelectInput setField="" />
     }
   }
 
@@ -57,7 +57,12 @@ const NewTemplateInfo: React.FC = () => {
               </div>
               <div className="input-group">
                 <label htmlFor="template-name">Template Name</label>
-                <input className="template-name" type="text" id="template-name" placeholder="Enter name..." />
+                <input
+                  className="template-name"
+                  type="text"
+                  id="template-name"
+                  placeholder="Enter name..."
+                />
               </div>
               <div className="input-group">
                 <label htmlFor="line-of-business">Line of Business</label>
@@ -73,15 +78,21 @@ const NewTemplateInfo: React.FC = () => {
               </div>
             </div>
             <div className="form-actions">
-              <Button primary="button" btnClass="action__import" onClick={toggleSidePanel}>Import</Button>
-              <Button primary="button" btnClass="action__continue" onClick={submitText}>Continue</Button>
+              <Button primary="button" btnClass="action__import" onClick={toggleSidePanel}>
+                Import
+              </Button>
+              <Button primary="button" btnClass="action__continue" onClick={submitText}>
+                Continue
+              </Button>
             </div>
           </div>
         </section>
-        {showPanel ? <SidePanel heading="Import" >
-          <FileUploadInput />
-          <TemplateDetails />
-        </SidePanel> : null}
+        {showPanel ? (
+          <SidePanel heading="Import">
+            <FileUploadInput />
+            <TemplateDetails />
+          </SidePanel>
+        ) : null}
       </Layout>
     </>
   )
